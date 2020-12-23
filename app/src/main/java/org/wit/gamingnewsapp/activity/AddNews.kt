@@ -31,6 +31,7 @@ class AddNews : AppCompatActivity() {
                 toast("Please Enter the title to procceed")
             }else{
                 gaming.create(gamingnews.copy())
+                toast("News Added")
             }
         }
     }

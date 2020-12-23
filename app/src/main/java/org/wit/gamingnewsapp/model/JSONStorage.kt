@@ -34,6 +34,16 @@ class JSONStorage : GamingNewsStore {
         return gamingNews
     }
 
+    override fun delete(idToDelete: Long){
+
+        gamingNews.forEach{ item ->
+            if (item.id == idToDelete){
+                gamingNews.remove(item)
+                serialize()
+            }
+        }
+    }
+
     override fun create(gamingnews: GamingNewsModel) {
         gamingnews.id = generateRandomId()
         gamingNews.add(gamingnews)
