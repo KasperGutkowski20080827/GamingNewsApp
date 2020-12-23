@@ -52,7 +52,14 @@ class JSONStorage : GamingNewsStore {
 
 
     override fun update(gamingnews: GamingNewsModel) {
-        // todo
+        gamingNews.forEach{ item ->
+            if (item.id == gamingnews.id){
+                item.title = gamingnews.title
+                item.description = gamingnews.description
+                item.bodyReport = gamingnews.bodyReport
+                serialize()
+            }
+        }
     }
 
     private fun serialize() {

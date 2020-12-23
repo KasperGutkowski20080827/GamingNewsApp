@@ -29,10 +29,10 @@ class DeleteNews : AppCompatActivity() {
             gamingnews.id = idDelete.text.toString().toLong()
 
             if(gamingnews.id === 0L){
-                toast("Enter ID")
+                toast("Enter ID to delete a news report")
             }else
                 gaming.delete(gamingnews.id)
-                toast("ID Deleted")
+                toast("News Report Deleted")
         }
     }
 }
