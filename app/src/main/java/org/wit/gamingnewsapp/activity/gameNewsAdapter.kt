@@ -33,6 +33,7 @@ class gameNewsAdapter constructor(
 
         fun bind(gameNews: GamingNewsModel,  ) {
             itemView.gameTitle.text = gameNews.title
+            itemView.author.text = gameNews.author
             itemView.description.text = gameNews.description
             itemView.bodyReport.text = gameNews.bodyReport
         }

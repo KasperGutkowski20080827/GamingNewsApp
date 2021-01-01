@@ -24,15 +24,24 @@ class AddNews : AppCompatActivity() {
         val addButton = findViewById<Button>(R.id.addButton)
         addButton.setOnClickListener{
             gamingnews.title = NewsTitle.text.toString()
+            gamingnews.author = NewsAuthor.text.toString()
             gamingnews.description = NewsDescription.text.toString()
             gamingnews.bodyReport = NewsBody.text.toString()
 
             if(gamingnews.title.isEmpty()){
                 toast("Please Enter the title to procceed")
-            }else{
+            }
+            else if(gamingnews.author.isEmpty()){
+                toast("Enter authors name to proceed")
+            }
+            else if(gamingnews.bodyReport.isEmpty()){
+                toast("Enter the article to add a news report")
+            }
+            else{
                 gaming.create(gamingnews.copy())
-                toast("News Added")
+                toast("Gaming news successfully Added")
             }
         }
     }
 }
+

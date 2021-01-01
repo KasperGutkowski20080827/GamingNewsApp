@@ -26,14 +26,15 @@ class EditNews : AppCompatActivity() {
         editButton.setOnClickListener{
             gamingnews.id = editIDnews.text.toString().toLong()
             gamingnews.title = editTitle.text.toString()
+            gamingnews.author = editAuthor.text.toString()
             gamingnews.description = editDescription.text.toString()
             gamingnews.bodyReport = editBody.text.toString()
 
-            if(gamingnews.id === 0L){
+            if(gamingnews.id === 0L) {
                 toast("Enter ID to edit a news report")
             }else
                 gaming.update(gamingnews.copy())
-            toast("News Updated")
+            toast("Game News Updated")
         }
 
     }

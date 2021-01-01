@@ -22,17 +22,15 @@ class DeleteNews : AppCompatActivity() {
 
         gaming = JSONStorage(applicationContext)
 
-
-
         val deleteButton = findViewById<Button>(R.id.newsDeleteButton)
         deleteButton.setOnClickListener{
             gamingnews.id = idDelete.text.toString().toLong()
 
             if(gamingnews.id === 0L){
-                toast("Enter ID to delete a news report")
+                toast("Enter ID to delete a gaming news report")
             }else
                 gaming.delete(gamingnews.id)
-                toast("News Report Deleted")
+                toast("Game news Report Deleted")
         }
     }
 }

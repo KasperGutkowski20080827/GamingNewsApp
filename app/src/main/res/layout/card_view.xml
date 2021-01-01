@@ -16,19 +16,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameTitle"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/gameTitle" />
+            android:layout_below="@id/author"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/bodyReport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/description" />
+            android:layout_below="@id/description"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

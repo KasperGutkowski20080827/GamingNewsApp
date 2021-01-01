@@ -55,6 +55,7 @@ class JSONStorage : GamingNewsStore {
         gamingNews.forEach{ item ->
             if (item.id == gamingnews.id){
                 item.title = gamingnews.title
+                item.author = gamingnews.author
                 item.description = gamingnews.description
                 item.bodyReport = gamingnews.bodyReport
                 serialize()
